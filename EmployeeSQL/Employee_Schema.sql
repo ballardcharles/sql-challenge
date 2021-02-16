@@ -8,6 +8,8 @@ CREATE TABLE departments(
 	PRIMARY KEY (dept_no)
 );
 
+SELECT * FROM departments;
+
 -- Create titles table
 
 CREATE TABLE titles(
@@ -15,6 +17,8 @@ CREATE TABLE titles(
 	title VARCHAR NOT NULL,
 	PRIMARY KEY (title_id)
 );
+
+SELECT * FROM titles;
 
 -- Create employees table
 
@@ -30,6 +34,8 @@ CREATE TABLE employees(
 	FOREIGN KEY (emp_title) REFERENCES titles(title_id)
 );
 
+SELECT * FROM employees;
+
 -- Create salaries table
 
 CREATE TABLE salaries(
@@ -37,6 +43,8 @@ CREATE TABLE salaries(
 	salary INT NOT NULL,
 	FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
+
+SELECT * FROM salaries;
 
 -- Create Department Manager Table
 
@@ -47,6 +55,8 @@ CREATE TABLE dept_manager(
 	FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
 
+SELECT * FROM dept_manager;
+
 -- CREATE Employee Number Table
 
 CREATE TABLE emp_no(
@@ -56,7 +66,7 @@ CREATE TABLE emp_no(
 	FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
 
-
+SELECT * FROM emp_no;
 
 
 
