@@ -51,7 +51,11 @@ ON emp_no.emp_no = e.emp_no
 JOIN departments as d
 ON d.dept_no = emp_no.dept_no WHERE dept_name = 'Sales' OR dept_name = 'Development';
 
-
+-- In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
+SELECT last_name, count(emp_no) 
+FROM employees
+GROUP BY last_name
+ORDER BY count(emp_no) DESC;
 
 
 
